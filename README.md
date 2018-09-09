@@ -6,7 +6,7 @@
 https://www.txplore.com/p/rpifs-parts
 
 
-To complete this project, you will need the following parts:
+**To complete this project, you will need the following parts:**
 
 Raspberry Pi 3 Model B (RPi 2 will also work very well) | Amazon US | Amazon UK | Amazon DE |
 Case for Raspberry Pi 3 | Amazon US | Amazon UK | Amazon DE |
