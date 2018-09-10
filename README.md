@@ -21,6 +21,14 @@ https://www.txplore.com/p/rpifs-parts
 - Mini breadboard | Amazon US | Amazon UK | Amazon DE |
 - Jumper wires | Amazon US | Amazon UK | Amazon DE |
 
+### Raspberry Pi 3 Spec
+- The Raspberry Pi 3, like the Raspberry Pi 2, comes with 1GByte of SDRAM.
+- The Raspberry Pi Model B (2 and 3) have 4 USB2.0 ports, an Ethernet 10/100 Mbps connector, HDMI and headphone ports, camera and display interfaces, plus a mini-USB port for power.
+- The Raspberry Pi 3 also has built-in Wifi 802.11n LAN, and Bluetooth 4.0.
+- The Raspberry Pi Model B (2 and 3) have a 40-pin GPIO header. Not all of the pins are General Purpose Input Outputs. Several have specific functions like GND, 5V or 3.3V.
+- HAT: Hardware Attached on Top, a HAT is board the size of the Raspberry Pi that plugs into the 40-pin headers and implements various functionalities, like displays and relays.
+- The Raspberry Pi Foundation recommends a 5V, 2.5A power supply. If your application does not include power-hungry peripherals, like LCD screens, relays and dics, you can use smaller supplies, like 1.5A. However, using the official 5.1V, 2.5A power supply can help avoid many common power-related problems.
+
 
 
 
