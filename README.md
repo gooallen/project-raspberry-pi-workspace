@@ -47,6 +47,7 @@ Default id and password, pi, raspberry
 sudo - super user do, or substitute user do
 
 sudo raspi-config
+<Raspberry Pi Configuration>
 
 
 
