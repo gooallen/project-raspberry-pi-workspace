@@ -47,7 +47,13 @@ Default id and password, pi, raspberry
 sudo - super user do, or substitute user do
 
 sudo raspi-config
-<Raspberry Pi Configuration>
+
+***Windows and Mac are pretty much similar but Windows requiring additional program to download***
+
+### Raspberry Pi Configuration Tool
+
+
+
 
 
 
