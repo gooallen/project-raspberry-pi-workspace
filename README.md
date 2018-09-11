@@ -32,6 +32,24 @@ https://www.txplore.com/p/rpifs-parts
 
 
 
+### raspberrypi.org
+Raspbian-stretch-lite.img 
+
+etcher.io
+- A utility for copying an image to SD cards
+
+txplo.re/rpissh
+- How to set up SSH on the Raspberry Pi
+- SSH file is dealing with booting configure file named **wpa_supplicant.conf**
+
+
+Default id and password, pi, raspberry
+sudo - super user do, or substitute user do
+
+sudo raspi-config
+
+
+
 
 
 
