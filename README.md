@@ -50,8 +50,20 @@ sudo raspi-config
 
 ***Windows and Mac are pretty much similar but Windows requiring additional program to download***
 
-### Raspberry Pi Configuration Tool
+## Raspbian Lite Set up
+- format SD card and burn with image file. (I used Etcher)
+- create SSH file without any extension. 
+```
+network {
+..
+}  
+```
+- connect Ethernet and power and wait about two minutes
+- configure network with **Advaned IP Scanner** and **puTTY**
+- get ip address of Raspberry Pi and connect with puTTY
 
+
+### Raspberry Pi Configuration Tool
 
 
 
