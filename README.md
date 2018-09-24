@@ -62,6 +62,7 @@ network {
 - configure network with **Advaned IP Scanner** and **puTTY**
 - get ip address of Raspberry Pi and connect with puTTY (mine is 192.168.0.15)
 
+
 ## sudo mode that allows you to control that other user can't
 
 ```
@@ -96,9 +97,13 @@ passwd root
 
 Shutdown Raspberry Pi
 ```
-sudo shutdown
+sudo shutdown -r (reboot or restart)
+sudo shutdown -h (hold)
+sudo shutdown -h now
 ```
 
+Backup Image file (Win32 Imager)
+- shutdown rasberry Pi first with command
 
 
 
