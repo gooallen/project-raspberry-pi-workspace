@@ -62,12 +62,42 @@ network {
 - configure network with **Advaned IP Scanner** and **puTTY**
 - get ip address of Raspberry Pi and connect with puTTY (mine is 192.168.0.15)
 
+## sudo mode that allows you to control that other user can't
 
-### Raspberry Pi Configuration Tool
+```
+sudo su
+ls - alk
+ls -al
 
+cd /proc
+ls -al
 
+exit
+```
 
+Raspberry Pi Configure
+```
+sudo raspi-config
+```
 
+Nano Text Editor to enable the 'root' user login with SSH
+```
+sudo su
+nano /etc/ssh/sshd_config 
+
+#PermitRootLogin (uncommented delete #)
+->
+PermitRootLogin yes
+/etc/init.d/ssh/ restart
+
+passwd root
+
+```
+
+Shutdown Raspberry Pi
+```
+sudo shutdown
+```
 
 
 
