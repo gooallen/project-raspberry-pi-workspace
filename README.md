@@ -60,7 +60,7 @@ network {
 ```
 - connect Ethernet and power and wait about two minutes
 - configure network with **Advaned IP Scanner** and **puTTY**
-- get ip address of Raspberry Pi and connect with puTTY
+- get ip address of Raspberry Pi and connect with puTTY (mine is 192.168.0.15)
 
 
 ### Raspberry Pi Configuration Tool
