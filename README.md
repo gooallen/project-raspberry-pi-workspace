@@ -108,7 +108,19 @@ Backup Image file (Win32 Imager)
 
 Install Python3
 ```
-sudo apt-get install python3-pip
+sudo apt-get install python3
+```
+Install Python3 (pip3)
+```
+sudo apt-get install python3 pip
+```
+If 'pip3 --version'' is not working then, you might need to update it.
+```
+sudo apt-get update
+```
+Install rpi.gpio package on pip3
+```
+pip3 install rpi.gpio
 ```
 
 
