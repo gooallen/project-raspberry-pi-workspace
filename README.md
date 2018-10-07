@@ -106,6 +106,10 @@ sudo shutdown -h now
 Backup Image file (Win32 Imager)
 - shutdown rasberry Pi first with command
 
+Install Python3
+```
+sudo apt-get install python3-pip
+```
 
 
 
