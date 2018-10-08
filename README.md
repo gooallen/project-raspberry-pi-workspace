@@ -385,6 +385,8 @@ server {
 ln -s /var/www/lab_app/lab_app_nginx.conf /etc/nginx/conf.d/
 ls -al /etc/nginx/conf.d/   ## to check configure file is set or not
 /etc/init.d/nginx restart   ## restart nginx
+
+systemctl restart nginx ## try this, if above is not working
 ```
 ### 43. USWGI configuration
 
@@ -417,6 +419,10 @@ callable = app
 # location of log files
 logto = /var/log/uwsgi/%n.log
 ```
+Create folder for log file
+```
+mkdir /var/log/uwsgi
+```
 
 [UWSGI configuration](txplo.re/rpifsuwsgi)
 
@@ -426,3 +432,35 @@ Testing USWGI is working properly. **Basically, UWSGI allows to connect to Nginx
 ```
 bin/uwsgi --ini /var/www/lab_app/lab_app_uwsgi.ini
 ```
+For now, if Raspberry Pi reboots, we're not able to use uwsgi so far. (but we will do it with **systemd**)
+
+### 45. Configure systemmd to auto-start uwsgi
+
+**systemd** 
+```
+vim /etc/systemd/system/emperor.uwsgi.service
+```
+```
+[Unit]
+Description=uWSGI Emperor
+After=syslog.target
+
+[Service]
+ExecStart=/var/www/lab_app/bin/uwsgi --ini /var/www/lab_app/lab_app_uwsgi.ini
+# Required systemd version 211 or newer
+RuntimeDirectory=uwsgi
+Restart=always
+KillSignal=SIGQUIT
+Type=notify
+StandardError=syslog
+NotifyAccess=all
+
+[Install]
+WantedBy=multi-user.target
+
+```
+```
+systemctl start emperor.uwsgi.service   # to start systemd
+systemctl status emperor.uwsgi.service  # to check the status of the systemd
+```
+
