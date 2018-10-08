@@ -260,7 +260,7 @@ In the Python-3.6.4 folder,
 ```
 sudo su
 
-cd / var
+cd /var
 ls -al
 ```
 'sudo su' lets you enter root@ mode in Python-3.6.4
@@ -285,4 +285,5 @@ Even if you went through all, you still see the default Python on Raspberry Pi. 
 ```
 . bin/activate
 python --version
+deactivate (always able to go back)
 ```
