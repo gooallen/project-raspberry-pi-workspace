@@ -347,3 +347,42 @@ if __name__ == "__main__":
 References
 - [Flask](flask.pocoo.org)
 - [Python main](txplo.re/pymain)
+
+### 41. USWGI Installation
+```
+pip install uwsgi
+```
+
+### 42. Nginx configuration
+Remove Nginx welcome page
+```
+rm /etc/nginx/sites-enabled/default
+```
+Create Nginx configuration file
+```
+vim lab_app_nginx.conf
+```
+```
+server {
+  listen 80;
+  server_name localhost;
+  charset utf-8;
+  client_max_body_size 75M;
+  
+  location /static {
+    root /var/www/lab_app/;
+  }
+  
+  location / { try_files $uri @labapp; }
+  location @labapp {
+      include uwsgi_params;
+      uwsgi_pass unix:/var/www/lab_app/lab_app_uwsgi.sock;
+  }
+}
+```
+
+```
+ls -s /var/www/lab_app/lab_app_nginx.conf /etc/nginx/conf.d/
+ls -al /etc/nginx/conf.d/   ## to check configure file is set or not
+/etc/init.d/nginx restart   ## restart nginx
+```
