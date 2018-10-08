@@ -243,6 +243,14 @@ sudo apt-get install python-dev
 sudo apt-get install libssl-dev openssl
 
 ```
+### 36. Download, compile and install Python 3
+```
+mkdir python-source
+cd python-source
+wget https://www.python.org/ftp/python/3.6.4/Python-3.6.4.tgz
+tar zxvf Python-3.6.4.tgz
+cd Python-3.6.4
+./configure --prefix=/usr/local/opt/python-3.6.4
 
-
+```
 
