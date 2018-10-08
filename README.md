@@ -195,4 +195,7 @@ GPIO.cleanup()
 
 ```
 sudo apt-get install git-core
+git config --global user.email. allen@allengoo.com
+git config --global user.name "gooallen"
+git clone https://github.com/.../.git
 ```
