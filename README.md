@@ -462,5 +462,6 @@ WantedBy=multi-user.target
 ```
 systemctl start emperor.uwsgi.service   # to start systemd
 systemctl status emperor.uwsgi.service  # to check the status of the systemd
+systemctl enable emperor.uwsgi.service  # to enable the systemd when the Raspberry Pi reboots
 ```
 
