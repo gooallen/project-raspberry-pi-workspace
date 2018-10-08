@@ -386,3 +386,43 @@ ln -s /var/www/lab_app/lab_app_nginx.conf /etc/nginx/conf.d/
 ls -al /etc/nginx/conf.d/   ## to check configure file is set or not
 /etc/init.d/nginx restart   ## restart nginx
 ```
+### 43. USWGI configuration
+
+```
+vim lab_app_uwsgi.ini
+```
+```
+[uwsgi]
+# application's base folder
+base = /var/www/lab_app
+
+# python moudle to import
+app = hello
+module = %(app)
+
+home = %(base)
+pythonpath = %(base)
+
+# socket file's location (must be exactly same as the socket file)
+socket = /var/www/lab_app/%n.sock
+
+# permissions for the socket file
+chmod-socket = 666
+
+# the variable that holds a flask
+# application inside the module
+# imported at line #6
+callable = app
+
+# location of log files
+logto = /var/log/uwsgi/%n.log
+```
+
+[UWSGI configuration](txplo.re/rpifsuwsgi)
+
+### 44. UWSGI and Nginx configuration testing
+
+Testing USWGI is working properly. **Basically, UWSGI allows to connect to Nginx to be able to WSGI spec (when they do, they will communicate over a low level protocal known as uwsgi)**
+```
+bin/uwsgi --ini /var/www/lab_app/lab_app_uwsgi.ini
+```
