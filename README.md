@@ -122,7 +122,7 @@ Install rpi.gpio package on pip3
 ```
 pip3 install rpi.gpio
 ```
-Turn on light on pin 7
+### Turn on light on pin 7
 ```python
 import RPi.GPIO as GPIO
 pin = 7
@@ -146,7 +146,7 @@ list (on RaspberryPi)
 ls -al
 ```
 
-button.py
+### button.py
 ```python
 import RPi.GPIO as GPIO
 import time
