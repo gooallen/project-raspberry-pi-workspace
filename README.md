@@ -208,4 +208,14 @@ cd examples
 ls -al
 // there's AdafuitDHT.py
 python3 AdafruitDHT.py 2302 17
+// * you can check the instruction
+cat AdafruitDHT.py
 ```
+
+# The Web Application Stack
+------------------
+User & Web Browser
+------------------
+
+
+
