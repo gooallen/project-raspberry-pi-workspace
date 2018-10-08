@@ -122,6 +122,20 @@ Install rpi.gpio package on pip3
 ```
 pip3 install rpi.gpio
 ```
+Turn on light on pin 7
+```python
+import RPi.GPIO as GPIO
+pin = 7
+GPIO.setmode(GPIO.BOARD)
+GPIO.setup(pin, GPIO.OUT)
+GPIO.output(pin, GPIO.HIGH)
+GPIO.output(pin, GPIO.LOW)
+```
+
+Install offical simple editor, vim
+```
+sudo apt-get install vim
+```
 
 
 
