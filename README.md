@@ -256,5 +256,33 @@ sudo make install
 usr/local/opt/python-3.6.4/bin/python3.6 --version      (to check out the version)
 ```
 ### 37. Setup the app Python Virtual Environment
+In the Python-3.6.4 folder, 
+```
+sudo su
 
-
+cd / var
+ls -al
+```
+'sudo su' lets you enter root@ mode in Python-3.6.4
+```
+mkdir www
+cd www
+mkdir lab_app
+ls -al
+cd lab_app
+```
+Inside of the folder of lab_app, extracts Python virtual environment called venv.
+```
+/usr/local/opt/python-3.6.4/bin/python3.6.4/bin/python3.6 -m venv .
+// * if I'm not in the folder yet, this works as well (or they're equivalent, . or location)
+/usr/local/opt/python-3.6.4/bin/python3.6.4/bin/python3.6 -m venv /var/www/lab_app/
+```
+After that, you will be able to see more files downloaded
+```
+ls -al bin (just for checking)
+```
+Even if you went through all, you still see the default Python on Raspberry Pi. In order to use latest version that we just installed, (in the folder, lab_app) 
+```
+. bin/activate
+python --version
+```
