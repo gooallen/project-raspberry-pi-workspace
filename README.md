@@ -287,3 +287,33 @@ Even if you went through all, you still see the default Python on Raspberry Pi. 
 python --version
 deactivate (always able to go back)
 ```
+
+### 38. Setup Nginx
+Installment on the virtual environment (latest version),
+```
+apt-get install nginx
+```
+To check it's successfully installed, open a browser and put Raspberry Pi IP address. If so, you will be able to see Nginx welcome page.
+
+### 39. Flask
+Installment on the virtual environment (latest version),
+```
+pip install flask
+
+(if you want to upgrade pip)
+pip install --upgrade pip
+```
+```
+vim hello.py
+```
+```python
+from flask import Flask
+app = Flask(__name__)
+@app.route("/")
+
+def hello():
+  return "Hello World"
+
+if __name__ == "__main__":
+  app.run(host='0.0.0.0', port=8080)
+```
