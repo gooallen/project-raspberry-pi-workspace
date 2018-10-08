@@ -197,5 +197,8 @@ GPIO.cleanup()
 sudo apt-get install git-core
 git config --global user.email. allen@allengoo.com
 git config --global user.name "gooallen"
-git clone https://github.com/.../.git
+git clone https://github.com/adafruit/Adafruit_Python_DHT.git
+
+cd Adafruit_Python_DHT
+sudo python3 setup.py install
 ```
