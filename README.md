@@ -382,7 +382,7 @@ server {
 ```
 
 ```
-ls -s /var/www/lab_app/lab_app_nginx.conf /etc/nginx/conf.d/
+ln -s /var/www/lab_app/lab_app_nginx.conf /etc/nginx/conf.d/
 ls -al /etc/nginx/conf.d/   ## to check configure file is set or not
 /etc/init.d/nginx restart   ## restart nginx
 ```
