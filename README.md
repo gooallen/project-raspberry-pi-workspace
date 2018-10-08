@@ -136,6 +136,9 @@ Install offical simple editor, vim
 ```
 sudo apt-get install vim
 ```
-
+Create file by vim
+```
+vim button.py
+```
 
 
