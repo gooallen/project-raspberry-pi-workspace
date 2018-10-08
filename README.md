@@ -345,5 +345,5 @@ if __name__ == "__main__":
 # Missing host and port are not accessble due to permission
 ```
 References
-[Flask](flask.pocoo.org)
-[Python __main__](txplo.re/pymain)
+- [Flask](flask.pocoo.org)
+- [Python main](txplo.re/pymain)
