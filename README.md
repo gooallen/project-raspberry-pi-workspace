@@ -193,3 +193,6 @@ GPIO.cleanup()
 ```
 
 
+```
+sudo apt-get install git-core
+```
