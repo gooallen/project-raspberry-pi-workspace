@@ -463,5 +463,17 @@ WantedBy=multi-user.target
 systemctl start emperor.uwsgi.service   # to start systemd
 systemctl status emperor.uwsgi.service  # to check the status of the systemd
 systemctl enable emperor.uwsgi.service  # to enable the systemd when the Raspberry Pi reboots
+
+reboot  # reboot to check it's working
+```
+then, hit the ip adress after its boothing.
+
+
+### 46. SQLite3
+Since it's been rebooted, start from sudo su
+```
+sudo su
+cd /var/www/lab_app/
+apt-get install sqlite3
 ```
 
