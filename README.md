@@ -1,7 +1,7 @@
 
 # Raspberry-Pi_Workspace
 
-## 192.168.0.15
+## 192.168.0.10
 
 ### List of parts
 https://www.txplore.com/p/rpifs-parts
@@ -201,4 +201,11 @@ git clone https://github.com/adafruit/Adafruit_Python_DHT.git
 
 cd Adafruit_Python_DHT
 sudo python3 setup.py install
+
+// inside of the folder
+cd examples
+// you can check by ls -al
+ls -al
+// there's AdafuitDHT.py
+python3 AdafruitDHT.py 2302 17
 ```
