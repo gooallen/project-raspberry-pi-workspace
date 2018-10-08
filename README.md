@@ -212,10 +212,18 @@ python3 AdafruitDHT.py 2302 17
 cat AdafruitDHT.py
 ```
 
-# The Web Application Stack
+### The Web Application Stack
 ------------------
 User & Web Browser
 ------------------
+[ Server Operating System ]
+Web Server -- NGINX
+Application Server -- nWSGI
+App framework -- Flask
+Application -- Raspbian Streatch Lite, debian
+[ Raspberry Pi Server Hardware -- Raspberry Pi ]
+
+
 
 
 
