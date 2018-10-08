@@ -255,4 +255,6 @@ make        (takes time)
 sudo make install
 usr/local/opt/python-3.6.4/bin/python3.6 --version      (to check out the version)
 ```
+### 37. Setup the app Python Virtual Environment
+
 
