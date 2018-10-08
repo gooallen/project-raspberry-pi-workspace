@@ -234,6 +234,15 @@ Application -- Raspbian Streatch Lite, debian
 [ Raspberry Pi Server Hardware -- Raspberry Pi ]
 
 
+### 35. Set up system Python - preparation
+```
+sudo apt-get install build-essential
+sudo apt-get install libncurses5-dev libncursesw5-dev libreadline6-dev
+sudo apt-get install libbz2-dev libexpat1-dev liblzma-dev zlib1g-dev libsqlite3-dev libgdbm-dev tk8.5-dev
+sudo apt-get install python-dev
+sudo apt-get install libssl-dev openssl
+
+```
 
 
 
