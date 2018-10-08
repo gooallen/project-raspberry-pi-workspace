@@ -476,4 +476,45 @@ sudo su
 cd /var/www/lab_app/
 apt-get install sqlite3
 ```
+```
+splite3 sample.sql
+.help   # get information
+begin;
+create table temperatures (rDatetime datetime, sensorID text, temp numeric);
+insert into temperatures values (datetime('now'),"1", 25.10);
+commit;
+select * from temperatures;
+
+.exit
+
+
+```
+
+### 49. Setup the static assets directory
+```
+/var/www/lab_app#
+mkdir static
+mkdir css
+mkdir images
+
+cd static
+vim a_static_file.html
+```
+```html
+<html>
+  <head>
+    <title>Static page</title>
+  </head>
+  <body>
+    <h1>This is an example of a static page</h1>
+    <p>Neat, isn't it?</p>
+  </body>
+</html>
+```
+```
+IP/static/a_static_file.html
+```
+[getskeleton](getskeleton.com)
+```
+
 
