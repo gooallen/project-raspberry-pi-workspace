@@ -311,9 +311,37 @@ from flask import Flask
 app = Flask(__name__)
 @app.route("/")
 
+# after app.route, all will be called
 def hello():
   return "Hello World"
 
+# Without the run function, Flask won't work
 if __name__ == "__main__":
   app.run(host='0.0.0.0', port=8080)
 ```
+Open a browser, put IP address with port number (8080)
+
+### 40. Simple Flask app
+
+```python
+from flask import Flask
+app = Flask(__name__)
+@app.route("/")
+
+# after app.route, all will be called
+def hello():
+  return "Hello World"
+  
+# http://ip:8080/example
+@app.route("/example")
+def example_route():
+  return "This is an example route"
+
+# Without the run function, Flask won't work
+if __name__ == "__main__":
+  app.run(host='0.0.0.0', port=8080)
+
+# But even if, you commented run function, you can run by using 'flask run --host=0.0.0.0 --port=1234'
+# Missing host and port are not accessble due to permission
+```
+reference: flask.pocoo.org, txplo.re/pymain
