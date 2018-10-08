@@ -344,4 +344,6 @@ if __name__ == "__main__":
 # But even if, you commented run function, you can run by using 'flask run --host=0.0.0.0 --port=1234'
 # Missing host and port are not accessble due to permission
 ```
-reference: flask.pocoo.org, txplo.re/pymain
+References
+[Flask](flask.pocoo.org)
+[Python __main__](txplo.re/pymain)
