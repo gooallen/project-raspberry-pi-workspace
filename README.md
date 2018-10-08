@@ -140,6 +140,11 @@ Create file by vim
 ```
 vim button.py
 ```
+Check file
+```
+cat button.py
+```
+
 
 list (on RaspberryPi)
 ```
