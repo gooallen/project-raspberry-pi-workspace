@@ -545,7 +545,7 @@ Download -> css -> skeleton.css AND normalize.css
 </html>
 
 ```
-
+http://192.168.0.16/static/a_static_file.html
 
 ### 52. Flask Template
 
@@ -573,5 +573,10 @@ Download -> css -> skeleton.css AND normalize.css
 </body>
 </html>
 ```
+Need to restart Uwsgi
+```
+/var/www/lab_app# systemctl restart emperor.uwsig.service
+```
+http://ip
 
 
