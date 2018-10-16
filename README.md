@@ -511,10 +511,15 @@ vim a_static_file.html
   </body>
 </html>
 ```
+
 ```
 IP/static/a_static_file.html
 ```
 [getskeleton](http://getskeleton.com/)
-```
+Download -> css -> skeleton.css AND normalize.css
+
+### 51. Copying files using SFTP
+
+cyberDuck
 
 
