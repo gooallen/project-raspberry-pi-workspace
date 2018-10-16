@@ -514,7 +514,7 @@ vim a_static_file.html
 ```
 IP/static/a_static_file.html
 ```
-[getskeleton](getskeleton.com)
+[getskeleton](http://getskeleton.com/)
 ```
 
 
