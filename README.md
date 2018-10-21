@@ -630,6 +630,7 @@ cd ../..
 ```
 Create new file called **lab_app.py**
 
+Good to know that **lab_temp.html** review in terms of 10 seconds refresh and temerature & humidity format
 
 
 
