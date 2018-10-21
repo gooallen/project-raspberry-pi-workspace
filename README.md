@@ -348,7 +348,7 @@ References
 - [Flask](flask.pocoo.org)
 - [Python main](txplo.re/pymain)
 
-### 41. USWGI Installation
+### 41. UWSGI Installation
 ```
 pip install uwsgi
 ```
@@ -388,7 +388,7 @@ ls -al /etc/nginx/conf.d/   ## to check configure file is set or not
 
 systemctl restart nginx ## try this, if above is not working
 ```
-### 43. USWGI configuration
+### 43. UWSGI configuration
 
 ```
 vim lab_app_uwsgi.ini
