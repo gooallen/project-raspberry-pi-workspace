@@ -580,3 +580,8 @@ Need to restart Uwsgi
 http://ip
 
 
+### 52. Flask template
+
+In order to generate dynamic pages by the Flask framework, there are couple of things to do before simply import flask.
+
+
