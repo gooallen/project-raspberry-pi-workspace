@@ -622,4 +622,14 @@ cd examples
 python AdafruitDHT.py 2302 17
 ```
 
+### 56. Install the DHT library and the rpi-gpio module
+
+```
+## back to lab
+cd ../..
+```
+Create new file called **lab_app.py**
+
+
+
 
