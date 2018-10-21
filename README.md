@@ -549,6 +549,9 @@ http://192.168.0.16/static/a_static_file.html
 
 ### 52. Flask Template
 
+In order to generate dynamic pages by the Flask framework, there are couple of things to do before simply import flask.
+
+
 ```html
 <html>
 <head>
@@ -580,8 +583,43 @@ Need to restart Uwsgi
 http://ip
 
 
-### 52. Flask template
+### 53. Debugging a Flask app
+To set a debug mode, you have to add one line in the Python file
+```python
+##
+app = Flask(__name__)
+app.debug = True
+## ..
+```
+```
+. bin/activate
+python hello.py
+```
 
-In order to generate dynamic pages by the Flask framework, there are couple of things to do before simply import flask.
+### 54. Getting started with our web application
+**Section Objectives**
+1. Install DHT library and rip.gpio modules in the application Python Virtual Environment
+2. Access DHT22 sensor data from a Flask web application
+3. Store the data from the sensor in a database and show in the browser
+
+```
+cd /var/www/lab_app
+sudo su
+. bin/activate
+pip install rpi.gpio
+```
+
+https://github.com/adafruit/Adafruit_Python_DHT
+```
+git clone https://github.com/adafruit/Adafruit_Python_DHT.git
+cd Adafruit_Python_DHT
+python setup.py install
+```
+
+```
+../Adafruit_Python_DHT#
+cd examples
+python AdafruitDHT.py 2302 17
+```
 
 
