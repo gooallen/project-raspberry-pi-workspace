@@ -633,4 +633,15 @@ Create new file called **lab_app.py**
 Good to know that **lab_temp.html** review in terms of 10 seconds refresh and temerature & humidity format
 
 
-
+Aftr copy all files from repository (or clone files),
+```
+vim lap_app_uwsgi.ini
+```
+We have to change one line,
+```
+## which matches the name of python script that we're gonna use
+app = lab_app 
+## restart always after change
+systemctl restart emperor.uwsgi.service
+```
+http://ip/lab_temp
