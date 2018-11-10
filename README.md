@@ -645,3 +645,45 @@ app = lab_app
 systemctl restart emperor.uwsgi.service
 ```
 http://ip/lab_temp
+
+
+
+### 57. SQLite3
+txplo.re/rpi460
+```
+cd /var/www/lab_app# ls -al
+sqlite lab_app.db
+```
+Now, you're in sqlite>
+```
+#Create a new table
+sqlite> begin;
+sqlite> create table temperatures (rDatetime datetime, sensorID text, temp numeric);
+sqlite> insert into temperatures values (datetime(CURRENT_TIMESTAMP),"1",25);
+sqlite> insert into temperatures values (datetime(CURRENT_TIMESTAMP),"1",25.10);
+sqlite> commit;
+sqlite> .tables
+
+#Retrieve records
+sqlite> select * from temperatures;
+2015-04-07 04:47:00|1|25
+2015-04-07 04:47:25|1|25.1
+
+#Create another table
+sqlite> begin;
+sqlite> create table humidities (rDatetime datetime, sensorID text, hum numeric);
+sqlite> insert into humidities values (datetime(CURRENT_TIMESTAMP),"1",51);
+sqlite> insert into humidities values (datetime(CURRENT_TIMESTAMP),"1",51.10);
+sqlite> commit;
+
+#List existing tables
+sqlite> .tables
+humidities    temperatures
+
+#Show the schema of one of the tables
+sqlite> .schema temperatures
+CREATE TABLE temperatures (rDatetime datetime, sensorID text, temp numeric);
+
+#Exit sqlite3
+sqlite> .exit
+```
