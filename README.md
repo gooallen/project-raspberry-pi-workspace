@@ -687,3 +687,5 @@ CREATE TABLE temperatures (rDatetime datetime, sensorID text, temp numeric);
 #Exit sqlite3
 sqlite> .exit
 ```
+Now you will be able to see the .db file by ls -al
+
