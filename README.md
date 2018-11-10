@@ -689,3 +689,33 @@ sqlite> .exit
 ```
 Now you will be able to see the .db file by ls -al
 
+### 59. Schedule sensor reading with cron
+txplo.re/cron
+```
+/var/www/lab_app# crontab -e
+```
+Inside the crontab
+```
+*1 * * * * /var/www/lab_app/bin/python /var/www/lab_app/env_log.py
+```
+Check it in sqlite3 after few minutes
+```
+sqlite3 lab_app.db
+select * from temperatures;
+```
+```
+*10 * * * * /var/www/lab_app/bin/python /var/www/lab_app/env_log.py
+```
+*** 60. Display database 
+Try lab_app2.py from github. (replace lab_app2.py with lab_app.py)
+
+*** 61. Display database in the browser 
+Put lab_env_db_v1.html to 'templates' folder, and rename to lab_env_db,
+```
+** To restart
+systemctl restart emperor.uwsgi.service
+```
+Now you're good to go with **ip/lab_env_db**
+
+
+
