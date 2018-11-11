@@ -706,10 +706,10 @@ select * from temperatures;
 ```
 *10 * * * * /var/www/lab_app/bin/python /var/www/lab_app/env_log.py
 ```
-*** 60. Display database 
+### 60. Display database 
 Try lab_app2.py from github. (replace lab_app2.py with lab_app.py)
 
-*** 61. Display database in the browser 
+### 61. Display database in the browser 
 Put lab_env_db_v1.html to 'templates' folder, and rename to lab_env_db,
 ```
 ** To restart
@@ -717,5 +717,17 @@ systemctl restart emperor.uwsgi.service
 ```
 Now you're good to go with **ip/lab_env_db**
 
+### 62. Determine range selection
+**ip/lab_env_db?from=2018-11-10&to=2018-11-11
+
+### 63. Select range of records in SQLite
+Check system usage
+```
+df -h
+```
+```SQLite3
+SELECT * FROM temperatures WHERE rDatatime BETWEEN "2018-11-10" AND "2018-11-11";
+SELECT * FROM temperatures WHERE rDatatime BETWEEN "2018-11-10 11:00:00" AND "2018-11-11 15:00:00";
+```
 
 
