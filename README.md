@@ -755,6 +755,11 @@ jQuery is reading the form that I want to send data without submit button.
 ...
 ```
 
+### 68. Radio buttons
+
+Replace the old one with ver 6.py, then I will be able to sort with radio buttons.
+
+
 
 
 
