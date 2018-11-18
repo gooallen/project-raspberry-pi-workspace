@@ -801,7 +801,7 @@ pip install plotly --upgrade
 ```
 Set a crendential file with API
 ```python
-import plotyly
+import plotly
 plotly.tools.set_credentials_file(username='aaaaa', api_key='bbbbbb')
 ```
 To check the credntial file
