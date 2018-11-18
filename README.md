@@ -799,5 +799,25 @@ Plotly's Python package is updated frequently!
 ```
 pip install plotly --upgrade
 ```
-
+Set a crendential file with API
+```python
+import plotyly
+plotly.tools.set_credentials_file(username='aaaaa', api_key='bbbbbb')
+```
+To check the credntial file
+```
+ls -al ~/
+ls -al ~/.plotly
+```
+Test out plotly
+```python
+import plotly.plotly as py
+from plotly.graph_objs import *
+trace0 = Scatter(x=[1,2,3,4], y=[16,5,11,9])
+trace1 = Scatter(x=[1,2,3,4), y=[10,15,13,17])
+data = Data([trace0, trace1])
+py.plot(data, filename = 'basic-line')
+# Then you will be able to see this line below
+# 'https://plot.ly/~username/0'
+```
 
