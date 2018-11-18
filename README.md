@@ -760,6 +760,19 @@ jQuery is reading the form that I want to send data without submit button.
 Replace the old one with ver 6.py, then I will be able to sort with radio buttons.
 
 
+### 71. Testing Google Charts
 
+Replace the old one with ver 7.py and ver 3.html. (This needs to review)
+- Google Charts
+
+So far, so good process!
+
+### 74. Upload and test the DateTimePicker widget
+
+Replace the old one with ver 8.py and ver 4.html. (This needs to review)
+- jQuery, DateTimePicker
+
+### 75. Adjust datetimes to local time zone on the client side
+Replace the old one with ver 5.html. (This needs to review)
 
 
