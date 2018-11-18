@@ -730,4 +730,19 @@ SELECT * FROM temperatures WHERE rDatatime BETWEEN "2018-11-10" AND "2018-11-11"
 SELECT * FROM temperatures WHERE rDatatime BETWEEN "2018-11-10 11:00:00" AND "2018-11-11 15:00:00";
 ```
 
+### 65. URL Querystring validation
+Check current date and time
+```
+date
+```
+Replace version 3.py with 4.py
+
+### 67. Adding radio buttons for quick timedate range
+
+```
+
+```
+
+
+
 
