@@ -739,8 +739,20 @@ Replace version 3.py with 4.py
 
 ### 67. Adding radio buttons for quick timedate range
 
-```
+jQuery is reading the form that I want to send data without submit button.
+```html
+<form id="range_select" action = "/lab_env_db" method="GET">
+  <div class="one column">
+    <input type = "radio" name = "range_h" value="3" id = "radio_3" /><label for="radio_3">3hrs</label>
+  </dv>
+...
 
+<script>
+  jQuery("#range_select input[type=radio]").click(function(){
+    jQuery("#range_select").submit();
+   });
+</script> 
+...
 ```
 
 
