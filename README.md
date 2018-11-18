@@ -281,6 +281,7 @@ After that, you will be able to see more files downloaded
 ```
 ls -al bin (just for checking)
 ```
+<mark>. bin/activate</mark>
 Even if you went through all, you still see the default Python on Raspberry Pi. In order to use latest version that we just installed, (in the folder, lab_app) 
 ```
 . bin/activate
@@ -585,7 +586,6 @@ http://ip
 
 ### 53. Debugging a Flask app
 To set a debug mode, you have to add one line in the Python file
-<mark>. bin/activate</mark>
 ```python
 ##
 app = Flask(__name__)
