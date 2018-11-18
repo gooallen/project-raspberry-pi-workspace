@@ -585,6 +585,7 @@ http://ip
 
 ### 53. Debugging a Flask app
 To set a debug mode, you have to add one line in the Python file
+<mark>. bin/activate</mark>
 ```python
 ##
 app = Flask(__name__)
