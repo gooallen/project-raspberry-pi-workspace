@@ -820,4 +820,10 @@ py.plot(data, filename = 'basic-line')
 # Then you will be able to see this line below
 # 'https://plot.ly/~username/0'
 ```
+IT NEEDS TO BE FIXED!
+
+### 86. Setting a static IP address 
+Get Raspberry Pi's mac address from router interface (ex. 192.168.0.1)
+Set to a static IP with the mac address from DHCP.
+B8:27:EB:D7:D3:24
 
