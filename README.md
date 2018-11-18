@@ -776,4 +776,28 @@ Replace the old one with ver 8.py and ver 4.html. (This needs to review)
 ### 75. Adjust datetimes to local time zone on the client side
 Replace the old one with ver 5.html. (This needs to review)
 
+### 77. Python's library, Arrow that allows you to utilize standard time zone based on location or setting
+
+### 78. Change time zone
+Replace the old one with ver 9.py and ver 5.html. (added Arrow library in python)
+```
+.bin /activate
+pip install Arrow
+```
+
+### 79. Link the two pages of the application (lab temp & lab env)
+Replace the old one with labtemp-ver3.html and lab-env-ver 6.html
+
+### 80. Plotly (data visualization via the web)
+```
+.bin /activate
+pip install plotly
+or
+sudo pip install plotly
+```
+Plotly's Python package is updated frequently!
+```
+pip install plotly --upgrade
+```
+
 
