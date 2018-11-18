@@ -281,7 +281,7 @@ After that, you will be able to see more files downloaded
 ```
 ls -al bin (just for checking)
 ```
-<mark>. bin/activate</mark>
+**- .bin/activate**
 Even if you went through all, you still see the default Python on Raspberry Pi. In order to use latest version that we just installed, (in the folder, lab_app) 
 ```
 . bin/activate
