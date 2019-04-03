@@ -234,7 +234,7 @@ Application -- Raspbian Streatch Lite, debian
 [ Raspberry Pi Server Hardware -- Raspberry Pi ]
 
 
-### 35. Set up system Python - preparation
+### Set up system Python - preparation
 ```
 sudo apt-get install build-essential
 sudo apt-get install libncurses5-dev libncursesw5-dev libreadline6-dev
@@ -243,7 +243,7 @@ sudo apt-get install python-dev
 sudo apt-get install libssl-dev openssl
 
 ```
-### 36. Download, compile and install Python 3
+### Download, compile and install Python 3
 ```
 mkdir python-source
 cd python-source
@@ -255,7 +255,7 @@ make        (takes time)
 sudo make install
 usr/local/opt/python-3.6.4/bin/python3.6 --version      (to check out the version)
 ```
-### 37. Setup the app Python Virtual Environment
+### Setup the app Python Virtual Environment
 In the Python-3.6.4 folder, 
 ```
 sudo su
@@ -289,14 +289,14 @@ python --version
 deactivate (always able to go back)
 ```
 
-### 38. Setup Nginx
+### Setup Nginx
 Installment on the virtual environment (latest version),
 ```
 apt-get install nginx
 ```
 To check it's successfully installed, open a browser and put Raspberry Pi IP address. If so, you will be able to see Nginx welcome page.
 
-### 39. Flask
+### Flask
 Installment on the virtual environment (latest version),
 ```
 pip install flask
@@ -322,7 +322,7 @@ if __name__ == "__main__":
 ```
 Open a browser, put IP address with port number (8080)
 
-### 40. Simple Flask app
+### Simple Flask app
 
 ```python
 from flask import Flask
@@ -349,12 +349,12 @@ References
 - [Flask](flask.pocoo.org)
 - [Python main](txplo.re/pymain)
 
-### 41. UWSGI Installation
+### UWSGI Installation
 ```
 pip install uwsgi
 ```
 
-### 42. Nginx configuration
+### Nginx configuration
 Remove Nginx welcome page
 ```
 rm /etc/nginx/sites-enabled/default
@@ -389,7 +389,7 @@ ls -al /etc/nginx/conf.d/   ## to check configure file is set or not
 
 systemctl restart nginx ## try this, if above is not working
 ```
-### 43. UWSGI configuration
+### UWSGI configuration
 
 ```
 vim lab_app_uwsgi.ini
@@ -425,9 +425,9 @@ Create folder for log file
 mkdir /var/log/uwsgi
 ```
 
-[UWSGI configuration](txplo.re/rpifsuwsgi)
+[UWSGI configuration]
 
-### 44. UWSGI and Nginx configuration testing
+### UWSGI and Nginx configuration testing
 
 Testing USWGI is working properly. **Basically, UWSGI allows to connect to Nginx to be able to WSGI spec (when they do, they will communicate over a low level protocal known as uwsgi)**
 ```
@@ -435,7 +435,7 @@ bin/uwsgi --ini /var/www/lab_app/lab_app_uwsgi.ini
 ```
 For now, if Raspberry Pi reboots, we're not able to use uwsgi so far. (but we will do it with **systemd**)
 
-### 45. Configure systemmd to auto-start uwsgi
+### Configure systemmd to auto-start uwsgi
 
 **systemd** 
 ```
@@ -470,7 +470,7 @@ reboot  # reboot to check it's working
 then, hit the ip adress after its boothing.
 
 
-### 46. SQLite3
+### SQLite3
 Since it's been rebooted, start from sudo su
 ```
 sudo su
@@ -491,7 +491,7 @@ select * from temperatures;
 
 ```
 
-### 49. Setup the static assets directory
+### Setup the static assets directory
 ```
 /var/www/lab_app#
 mkdir static
@@ -516,10 +516,8 @@ vim a_static_file.html
 ```
 IP/static/a_static_file.html
 ```
-[getskeleton](http://getskeleton.com/)
-Download -> css -> skeleton.css AND normalize.css
 
-### 51. Copying files using SFTP
+### Copying files using SFTP
 
 > cyberDuck
 
@@ -548,7 +546,7 @@ Download -> css -> skeleton.css AND normalize.css
 ```
 http://192.168.0.16/static/a_static_file.html
 
-### 52. Flask Template
+### Flask Template
 
 In order to generate dynamic pages by the Flask framework, there are couple of things to do before simply import flask.
 
@@ -584,7 +582,7 @@ Need to restart Uwsgi
 http://ip
 
 
-### 53. Debugging a Flask app
+### Debugging a Flask app
 To set a debug mode, you have to add one line in the Python file
 ```python
 ##
@@ -597,7 +595,7 @@ app.debug = True
 python hello.py
 ```
 
-### 54. Getting started with our web application
+### Getting started with our web application
 **Section Objectives**
 1. Install DHT library and rip.gpio modules in the application Python Virtual Environment
 2. Access DHT22 sensor data from a Flask web application
@@ -612,7 +610,6 @@ pip install rpi.gpio
 
 https://github.com/adafruit/Adafruit_Python_DHT
 ```
-git clone https://github.com/adafruit/Adafruit_Python_DHT.git
 cd Adafruit_Python_DHT
 python setup.py install
 ```
@@ -623,7 +620,7 @@ cd examples
 python AdafruitDHT.py 2302 17
 ```
 
-### 56. Install the DHT library and the rpi-gpio module
+### Install the DHT library and the rpi-gpio module
 
 ```
 ## back to lab
@@ -649,7 +646,7 @@ http://ip/lab_temp
 
 
 
-### 57. SQLite3
+### SQLite3
 txplo.re/rpi460
 ```
 cd /var/www/lab_app# ls -al
@@ -690,7 +687,7 @@ sqlite> .exit
 ```
 Now you will be able to see the .db file by ls -al
 
-### 59. Schedule sensor reading with cron
+### Schedule sensor reading with cron
 txplo.re/cron
 ```
 /var/www/lab_app# crontab -e
@@ -707,10 +704,9 @@ select * from temperatures;
 ```
 *10 * * * * /var/www/lab_app/bin/python /var/www/lab_app/env_log.py
 ```
-### 60. Display database 
-Try lab_app2.py from github. (replace lab_app2.py with lab_app.py)
+### Display database 
 
-### 61. Display database in the browser 
+### Display database in the browser 
 Put lab_env_db_v1.html to 'templates' folder, and rename to lab_env_db,
 ```
 ** To restart
@@ -718,10 +714,10 @@ systemctl restart emperor.uwsgi.service
 ```
 Now you're good to go with **ip/lab_env_db**
 
-### 62. Determine range selection
+### Determine range selection
 **ip/lab_env_db?from=2018-11-10&to=2018-11-11
 
-### 63. Select range of records in SQLite
+### Select range of records in SQLite
 Check system usage
 ```
 df -h
@@ -731,14 +727,14 @@ SELECT * FROM temperatures WHERE rDatatime BETWEEN "2018-11-10" AND "2018-11-11"
 SELECT * FROM temperatures WHERE rDatatime BETWEEN "2018-11-10 11:00:00" AND "2018-11-11 15:00:00";
 ```
 
-### 65. URL Querystring validation
+### URL Querystring validation
 Check current date and time
 ```
 date
 ```
 Replace version 3.py with 4.py
 
-### 67. Adding radio buttons for quick timedate range
+### Adding radio buttons for quick timedate range
 
 jQuery is reading the form that I want to send data without submit button.
 ```html
@@ -756,39 +752,33 @@ jQuery is reading the form that I want to send data without submit button.
 ...
 ```
 
-### 68. Radio buttons
+### Testing Google Charts
 
-Replace the old one with ver 6.py, then I will be able to sort with radio buttons.
-
-
-### 71. Testing Google Charts
-
-Replace the old one with ver 7.py and ver 3.html. (This needs to review)
 - Google Charts
 
 So far, so good process!
 
-### 74. Upload and test the DateTimePicker widget
+### Upload and test the DateTimePicker widget
 
 Replace the old one with ver 8.py and ver 4.html. (This needs to review)
 - jQuery, DateTimePicker
 
-### 75. Adjust datetimes to local time zone on the client side
+### Adjust datetimes to local time zone on the client side
 Replace the old one with ver 5.html. (This needs to review)
 
-### 77. Python's library, Arrow that allows you to utilize standard time zone based on location or setting
+### Python's library, Arrow that allows you to utilize standard time zone based on location or setting
 
-### 78. Change time zone
+### Change time zone
 Replace the old one with ver 9.py and ver 5.html. (added Arrow library in python)
 ```
 .bin /activate
 pip install Arrow
 ```
 
-### 79. Link the two pages of the application (lab temp & lab env)
+### Link the two pages of the application (lab temp & lab env)
 Replace the old one with labtemp-ver3.html and lab-env-ver 6.html
 
-### 80. Plotly (data visualization via the web)
+### Plotly (data visualization via the web)
 ```
 .bin /activate
 pip install plotly
@@ -822,8 +812,8 @@ py.plot(data, filename = 'basic-line')
 ```
 IT NEEDS TO BE FIXED!
 
-### 86. Setting a static IP address 
+### Setting a static IP address 
 Get Raspberry Pi's mac address from router interface (ex. 192.168.0.1)
 Set to a static IP with the mac address from DHCP.
-B8:27:EB:D7:D3:24
+
 
